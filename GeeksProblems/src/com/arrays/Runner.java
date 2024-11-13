@@ -8,5 +8,6 @@ public class Runner {
         int miss = MissingNumberInArray.getMissingNumber(arr);
         System.out.println(miss);
         System.out.println(MissingNumberInArray.getMissingNumberWithXor(arr));
+        System.out.println(MissingNumberInArray.getMissingNumberSet(arr));
     }
 }

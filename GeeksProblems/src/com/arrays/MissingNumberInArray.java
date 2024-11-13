@@ -1,6 +1,7 @@
 package com.arrays;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
 public class MissingNumberInArray {
@@ -48,4 +49,20 @@ public class MissingNumberInArray {
         return xorExpected ^ xorActual;
     }
 
+    public static int getMissingNumberSet(int arr[]) {
+        int n = arr.length + 1;
+        HashSet<Integer> set = new HashSet<>();
+
+        for (int num : arr) {
+            set.add(num);
+        }
+
+        for (int i = 1; i <= n; i++) {
+            if (!set.contains(i)) {
+                return i;
+            }
+        }
+
+        return -1; // In case no missing number is found
+    }
 }
