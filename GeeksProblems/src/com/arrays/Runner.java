@@ -24,5 +24,25 @@ public class Runner {
         System.out.println(ArrayOfDuplicatingNumbersInArray.getDuplicatingNumbers(Arrays.stream(mylist)
                 .boxed() // Convert each int to Integer
                 .collect(Collectors.toList())));
+
+        int[] arr1 = {3, 5, 2, 5, 7, 7, 1};
+        Integer result = SecondLargestNumber.getNumber(arr1);
+        if (result != null){
+            System.out.println("The second largest number is: " + result);
+        } else {
+            System.out.println("There is no second largest number.");
+        }
+        System.out.println();
+        System.out.println(SecondLargestNumber.getSecondLargestWithSort(arr1));
+
+
+
+
+
     }
 }
+
+
+
+
+
