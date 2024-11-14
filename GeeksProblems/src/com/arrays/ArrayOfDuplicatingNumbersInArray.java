@@ -1,10 +1,10 @@
 package com.arrays;
 
 import java.util.*;
-
-import static java.util.Arrays.sort;
-
-
+/*
+Given an array arr of integers, find all the elements that occur more than once in the array.
+Return the result in ascending order. If no element repeats, return an empty array.
+ */
 public class ArrayOfDuplicatingNumbersInArray {
 
     public static List<Integer> getThearry(int[] mylist){
@@ -19,19 +19,14 @@ public class ArrayOfDuplicatingNumbersInArray {
                         if(mylist[i] == foundArray.get(k)){
                             isWithin = true;
                         }
-
                     }
                     if (!isWithin){
                         foundArray.add(mylist[i]);
                     }
                 }
-
             }
-
         }
-
         Collections.sort(foundArray);
-
         return foundArray;
     }
 
