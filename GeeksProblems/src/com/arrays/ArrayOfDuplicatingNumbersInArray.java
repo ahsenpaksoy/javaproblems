@@ -51,5 +51,24 @@ public class ArrayOfDuplicatingNumbersInArray {
 
         return foundArray;
     }
+    public static List<Integer> getDuplicatesWithHasmap(int[] arr) {
+        ArrayList<Integer> list = new ArrayList<>();
+        Map <Integer, Integer> map = new HashMap<>();
+        for(int num:arr){ // 2,2
+            if(!map.containsKey(num)){
+                map.put(num,1);
+
+            }
+            else{
+                map.put(num,map.get(num)+1);
+                if(map.get(num)==2){
+                list.add(num);}
+
+            }
+        }
+
+        Collections.sort(list);
+        return list;
+    }
 
 }
