@@ -41,11 +41,15 @@ public class Runner {
 //        System.out.println("Pozitif bir sayi giriniz :");
 //        int n = scan.nextInt();
 //        PrintingPrimeNumber.printPrime(n);
-        int[] mylist =  {1,1,2,2, 3};
-        List<Integer> resultList = new ArrayList<>();
-        resultList = ArrayOfDuplicatingNumbersInArray.getDuplicatesWithHasmap(mylist);
-        System.out.println(resultList);
+//        int[] mylist =  {1,1,2,2, 3};
+//        List<Integer> resultList = new ArrayList<>();
+//        resultList = ArrayOfDuplicatingNumbersInArray.getDuplicatesWithHasmap(mylist);
+//        System.out.println(resultList);
 
+        System.out.println(Sorting.sorthingWithTreeMap(new int[] {1, 3,1, 2, 2, 5}));
+////// Equillibrum
+        int[] arr = {1,0};
+        System.out.println(Equillibrum.getEquillibrum(arr));
 
     }
 }
