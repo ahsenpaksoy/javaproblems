@@ -46,10 +46,12 @@ public class Runner {
 //        resultList = ArrayOfDuplicatingNumbersInArray.getDuplicatesWithHasmap(mylist);
 //        System.out.println(resultList);
 
-        System.out.println(Sorting.sorthingWithTreeMap(new int[] {1, 3,1, 2, 2, 5}));
+//        System.out.println(Sorting.sorthingWithTreeMap(new int[] {1, 3,1, 2, 2, 5}));
 ////// Equillibrum
-        int[] arr = {1,0};
-        System.out.println(Equillibrum.getEquillibrum(arr));
+//        int[] arr = {1,0};
+//        System.out.println(Equillibrum.getEquillibrum(arr));
+////// Peaknumber ın array
+        System.out.println(PeakNumberIndexInArray.getPeakNumber(new int[] {1,1,2,3,1,1}));
 
     }
 }
