@@ -29,5 +29,4 @@ public class ArrayLeaders {
         int[] arr = {16, 17, 4, 3, 5, 2};
         System.out.println(findLeaders(arr));
     }
-
 }
