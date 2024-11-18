@@ -1,14 +1,27 @@
 package com.arrays;
 
+import javax.swing.*;
 import java.util.*;
+import java.util.stream.Collectors;
+
 /*
 Given an array arr of integers, find all the elements that occur more than once in the array.
 Return the result in ascending order. If no element repeats, return an empty array.
  */
 public class ArrayOfDuplicatingNumbersInArray {
 
-    public static List<Integer> getThearry(int[] mylist){
+    public static void main(String[] args) {
+        int[] mylist =  {1,1,2,2};
+        List<Integer> resultList = new ArrayList<>();
+        resultList = ArrayOfDuplicatingNumbersInArray.getThearry(mylist);
+        System.out.println(resultList);
 
+        System.out.println(ArrayOfDuplicatingNumbersInArray.getDuplicatingNumbers(Arrays.stream(mylist)
+                .boxed() // Convert each int to Integer
+                .collect(Collectors.toList())));
+    }
+
+    public static List<Integer> getThearry(int[] mylist){
         List<Integer> foundArray = new ArrayList<>();
 
         for (int i = 0; i < mylist.length; i++) {
@@ -48,7 +61,6 @@ public class ArrayOfDuplicatingNumbersInArray {
                 seen.add(num);
             }
         }
-
         return foundArray;
     }
     public static List<Integer> getDuplicatesWithHasmap(int[] arr) {
@@ -57,18 +69,14 @@ public class ArrayOfDuplicatingNumbersInArray {
         for(int num:arr){ // 2,2
             if(!map.containsKey(num)){
                 map.put(num,1);
-
             }
             else{
                 map.put(num,map.get(num)+1);
                 if(map.get(num)==2){
                 list.add(num);}
-
             }
         }
-
         Collections.sort(list);
         return list;
     }
-
 }
