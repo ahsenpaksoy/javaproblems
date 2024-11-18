@@ -13,11 +13,17 @@ Explanation: All the numbers from 1 to 5 are present except 4.
  */
 public class MissingNumberInArray {
 
-    public static int getMissingNumber(int arr[]) {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 5};
+        int miss = MissingNumberInArray.getMissingNumber(arr);
+        System.out.println(miss);
+        System.out.println(MissingNumberInArray.getMissingNumberWithXor(arr));
+        System.out.println(MissingNumberInArray.getMissingNumberSet(arr));
+    }
 
+    public static int getMissingNumber(int arr[]) {
         int missingNumber = 0;
         for (int i = 1; i <= arr.length+1; i++) {
-
             boolean found = false;
             for (int j = 0; j < arr.length; j++) {
                 int temp = arr[j];
@@ -31,7 +37,6 @@ public class MissingNumberInArray {
                 break;
             }
         }
-
         return missingNumber;
     }
 
@@ -57,7 +62,6 @@ public class MissingNumberInArray {
     public static int getMissingNumberSet(int arr[]) {
         int n = arr.length + 1;
         HashSet<Integer> set = new HashSet<>();
-
         for (int num : arr) {
             set.add(num);
         }
@@ -67,7 +71,6 @@ public class MissingNumberInArray {
                 return i;
             }
         }
-
         return -1; // In case no missing number is found
     }
 }
