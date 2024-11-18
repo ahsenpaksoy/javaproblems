@@ -4,6 +4,10 @@ import java.util.*;
 
 public class Sorting {
 
+    public static void main(String[] args) {
+        System.out.println(Sorting.sorthingWithTreeMap(new int[] {1, 3,1, 2, 2, 5}));
+    }
+
     public static List<Integer> sorthingWithTreeMap (int[] arr){
         Map<Integer,List> map = new TreeMap<>();
         for(int num:arr){
