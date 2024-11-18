@@ -21,6 +21,11 @@ public class Equillibrum {
 //    Output: -1
 //    Explanation: There is no equilibrium point in the given array.
 
+    public static void main(String[] args) {
+        int[] arr = {1,0};
+        System.out.println(Equillibrum.getEquillibrum(arr));
+    }
+
     private static int sum(int[] arr, int startIndex, int EndIndex) {
         int sum = 0;
         for (int i = startIndex; i <= EndIndex; i++) {
